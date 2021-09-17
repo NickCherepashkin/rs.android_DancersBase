@@ -1,0 +1,42 @@
+<resources>
+    <string name="app_name">База танцоров</string>
+    <string name="str_dancer_name">ФИ танцора</string>
+    <string name="str_dancer_club">Клуб</string>
+    <string name="str_dancer_year_birth">Год рождения</string>
+    <string name="str_dancer_league">Лига</string>
+
+    <string name="room_impl_name">Room</string>
+    <string name="cursor_impl_name">Cursor</string>
+
+    <string-array name="sort_by">
+        <item>Фамилии</item>
+        <item>Году</item>
+        <item>Клубу</item>
+        <item>Лиге</item>
+    </string-array>
+    <string-array name="order_by">
+        <item>По возрастанию</item>
+        <item>По убыванию</item>
+    </string-array>
+    <string-array name="db_impl">
+        <item>@string/room_impl_name</item>
+        <item>@string/cursor_impl_name</item>
+    </string-array>
+
+    <string name="btn_update_dancer">Обновить данные</string>
+    <string name="btn_delete_dancer">Удалить данные</string>
+    <string name="btn_insert">Отправить данные</string>
+
+    <string name="action_settings">Настройки сортировки</string>
+    <string name="action_db_impl">Room</string>
+
+    <string name="fab_descr">Добавление новых танцоров</string>
+    <string name="empty_club_error">Пустое поле названия клуба не допустимо</string>
+    <string name="empty_league_error">Пустое поле названия лиги не допустимо</string>
+    <string name="empty_name_error">Пустое поле ФИ танцора не допустимо</string>
+    <string name="negative_year_birth_error">Ошибка ввода года рождения</string>
+    <string name="negative_age_error">Ребенок слишком мал. Минимальный возраст от 3-х лет.</string>
+    <string name="duplicate_error">Данный танцор уже добавлен!</string>
+
+    <string name="fragment_edit_title">Редактирование данных</string>
+</resources>
