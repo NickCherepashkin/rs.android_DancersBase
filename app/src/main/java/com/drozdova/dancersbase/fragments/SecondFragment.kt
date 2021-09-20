@@ -93,17 +93,17 @@ class SecondFragment : Fragment() {
                 binding.textInputLayClub.error = getString(R.string.empty_club_error)
             } else {
                 binding.textInputLayClub.error = null
-                binding.textInputLayClub.clearFocus()
-                hideKeyboard(view)
+                binding.textInputLeague.requestFocus()
             }
             return@setOnEditorActionListener true
         }
+
         binding.textInputLeague.setOnEditorActionListener { textView, i, _ ->
             if (textView.text.isEmpty() && i == EditorInfo.IME_ACTION_DONE) {
                 binding.textInputLayLeague.error = getString(R.string.empty_league_error)
             } else {
                 binding.textInputLayLeague.error = null
-                binding.textInputLayLeague.clearFocus()
+                binding.textInputLeague.clearFocus()
                 hideKeyboard(view)
             }
             return@setOnEditorActionListener true

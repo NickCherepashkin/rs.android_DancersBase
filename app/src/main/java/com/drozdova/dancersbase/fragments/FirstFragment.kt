@@ -102,6 +102,11 @@ class FirstFragment : Fragment(), DancerListener {
 
         return if ((fieldsSetPref != null) && (fieldsSetPref.size != 0)){
             for(i in 0 until fieldsSetPref.size){
+                when(fieldsSetPref[i].lowercase()){
+                    "фамилии" -> fieldsSetPref[i] = "name"
+                    "году" -> fieldsSetPref[i] = "year"
+                    "клубу" -> fieldsSetPref[i] = "club"
+                }
                 fieldsSetPref[i] = fieldsSetPref[i].lowercase() + orderPref
             }
             fieldsSetPref.reversed().joinToString(", ")

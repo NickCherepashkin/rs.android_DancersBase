@@ -31,15 +31,10 @@ class DancerRepository (private val dancerRoomDao: DancerDao, private val dancer
     }
 
     fun sort(orderFields: String): LiveData<List<Dancer>> {
-        var order: String = "name"
-        when(orderFields){
-            "Фамилии" -> order = "name"
-            "Году" -> order = "year"
-            "Клубу" -> order = "club"
-        }
         val query = SimpleSQLiteQuery(
-            "SELECT * FROM $DATABASE_TABLE_NAME ORDER BY $order")
-        return if(dbImplRoom){dancerRoomDao.getSortedDancers(query)
-        }else {dancerCursorDao.getSortedDancers(query)}
+            "SELECT * FROM $DATABASE_TABLE_NAME ORDER BY $orderFields")
+        return if(dbImplRoom){
+            dancerRoomDao.getSortedDancers(query)}
+        else { dancerCursorDao.getSortedDancers(query)}
     }
 }

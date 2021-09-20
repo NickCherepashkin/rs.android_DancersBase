@@ -12,7 +12,6 @@
         <item>Фамилии</item>
         <item>Году</item>
         <item>Клубу</item>
-        <item>Лиге</item>
     </string-array>
     <string-array name="order_by">
         <item>По возрастанию</item>
